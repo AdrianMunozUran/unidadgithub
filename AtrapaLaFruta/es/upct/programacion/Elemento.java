@@ -6,17 +6,25 @@ public class Elemento {
 		protected int y; 
 		protected int width; 
 		protected int height;
-		
-		public Elemento(int x, int y, int width, int height) {
-			super();
+		protected String imagen;
+		protected char simbolo; 
+		// no estan implementadas las variables simbolo,sonido
+		//porque no se el tipo de variable que deben ser
+		public Elemento(int x, int y, int width, int height,String imagen,char simbolo) {
 			this.x = x;
 			this.y = y;
 			this.width = width;
 			this.height = height;
+			this.imagen=imagen; 
+			this.simbolo=simbolo; 
 		}
 
 		
 
+		public String mostrarDatos() {
+			String datos="x"+"y"+width+height; 
+			return datos;
+		}
 		public int getX() {
 			return x;
 		}
@@ -47,6 +55,12 @@ public class Elemento {
 
 		public void setHeight(int height) {
 			this.height = height;
+		}
+
+
+
+		public char getSimbolo() {
+			return 0;
 		} 
 		
 }
