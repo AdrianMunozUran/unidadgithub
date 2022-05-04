@@ -1,10 +1,11 @@
-package es.upct.programacion;
+package atrapaLaFruta;
 
 public interface Efectos {
 
-	public void  Desenfocar();
+public void  Desenfocar();
 	
 	public void Correr();
 	
 	public void Ralentizar();
 }
+

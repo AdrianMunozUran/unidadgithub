@@ -1,4 +1,4 @@
-package es.upct.programacion;
+package atrapaLaFruta;
 
 import java.util.ArrayList;
 
@@ -22,21 +22,29 @@ public class Personaje extends Elemento {
 	}
 	public void saltar() {
 		
-	}
+	} 
 	
 	public void avanzar() {
-		
+		this.x=this.x + velocidad;
 	}
 
-	public void cogerFruta() {
-		
+	public void cogerFruta(Fruta fruta) {
+		this.frutas.add(fruta);
 	}
 	
-	public void choque() {
+	public boolean choque(Elemento fruta) {
+		if((this.x == fruta.getX())&&(this.y==fruta.getY())){
+			return true;
+		}
+			
+		else 
+			return false; 
 	}
 	public void mostrarFruta() {
 		
 	}
+	
+	
 }
 
 
