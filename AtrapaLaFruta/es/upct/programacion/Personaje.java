@@ -10,8 +10,12 @@ public class Personaje extends Elemento {
 	public Personaje(int x, int y, int width, int height, String imagen, char simbolo, int velocidad) {
 		super(x, y, width, height, imagen, simbolo);
 		this.velocidad=velocidad;
+		this.frutas = new ArrayList<Fruta>();
 	}
-
+	
+	public void mostrarDatos() {
+		System.out.println("Personaje " + this.x + " Posición Y: " + this.y);
+		}
 	
 	public int getVelocidad() {
 		return velocidad;
@@ -44,6 +48,14 @@ public class Personaje extends Elemento {
 		
 	}
 	
+
+
+	public void mostrarResultado() {
+		for (Fruta fruta: frutas) {
+			fruta.mostrarDatos();
+		}
+			
+	}
 	
 }
 

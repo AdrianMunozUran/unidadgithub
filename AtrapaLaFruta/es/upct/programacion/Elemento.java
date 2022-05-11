@@ -27,10 +27,10 @@ public class Elemento {
 		return imagen;
 	}
 	
-	public String mostrarDatos() {
-		String datos="x"+"y"+width+height; 
-		return datos;
+	public void mostrarDatos() {
 	}
+
+
 	public int getX() {
 		return x;
 	}

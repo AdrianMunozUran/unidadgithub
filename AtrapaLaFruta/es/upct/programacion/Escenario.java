@@ -59,31 +59,30 @@ package atrapaLaFruta;
 			this.personaje.saltar();
 			this.contSaltar=1; 
 		}
-		
+	
 	public boolean jugando() {
 		if (this.personaje.getX()<this.width -1) {
-			
 			this.personaje.avanzar();
+			
 			Elemento elemento_aux = null; 
 			for (Elemento elemento: elementos) {
-				if((elemento instanceof Fruta)&&(personaje.choque(elemento))){					
-						Fruta fruta = (Fruta) elemento; 
+				if((elemento instanceof Fruta)&&(personaje.choque(elemento))){						
+					Fruta fruta = (Fruta) elemento; 
 					//falta frutaMagica
-				
-						this.personaje.cogerFruta(fruta);
+					
+						personaje.cogerFruta(fruta);
 						elemento_aux=elemento;
-						break;
+					//	break;
 				}
 			}
 			if(elemento_aux!=null) {
 				elementos.remove(elemento_aux);
-				
 			}
 			return true; 
 		}
 			
 			else {
-				personaje.mostrarDatos();
+				personaje.mostrarResultado();
 				return false;
 			}
 		}

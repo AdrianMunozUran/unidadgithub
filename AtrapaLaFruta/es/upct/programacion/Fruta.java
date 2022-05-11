@@ -20,10 +20,9 @@ public class Fruta extends Elemento {
 		return y;
 	}
 	
-		public String mostrarDatos() {
-			String frase = super.mostrarDatos();
-			String frase2 = frase + "Otros de msi datos son: " + nombre;
-			return frase2;
+		public void mostrarDatos() {
+			System.out.println("Hola, soy una fruta, mis datos son: " + nombre + " "+ puntos + " " +  simbolo);
+			
 			}
 	
 	
